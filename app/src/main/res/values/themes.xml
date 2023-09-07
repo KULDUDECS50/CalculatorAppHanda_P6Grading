@@ -30,4 +30,31 @@
     </style>
 
     <style name="Theme.CalculatorApp" parent="Base.Theme.CalculatorApp" />
+    <style name = "FunctionButton" parent="Widget.Material3.Button">
+        <item name = "android:layout_width">@dimen/buttonW</item>
+        <item name = "android:layout_height">@dimen/buttonH</item>
+        <item name = "android:layout_marginTop">@dimen/buttonTop</item>
+        <item name = "android:backgroundTint">@color/md_theme_dark_inversePrimary</item>
+        <item name = "android:layout_marginStart">@dimen/buttonLeft</item>
+        <item name = "android:textSize">16sp</item>>
+    </style>
+    <style name = "OperatorButton" parent="Widget.Material3.Button">
+        <item name = "android:layout_width">@dimen/buttonW</item>
+        <item name = "android:layout_height">@dimen/buttonH</item>
+        <item name = "android:layout_marginTop">@dimen/rightButtonTop</item>
+        <item name = "android:layout_marginEnd">@dimen/rightButtonLeft</item>
+        <item name = "android:backgroundTint">@color/md_theme_dark_inversePrimary</item>
+        <item name = "android:layout_marginStart">@dimen/buttonLeft</item>
+        <item name = "android:textSize">35sp</item>
+    </style>
+    <style name = "NumberButton" parent = "Widget.Material3.Button">
+        <item name = "android:layout_width">65dp</item>
+        <item name = "android:layout_height">70dp</item>
+        <item name = "android:layout_marginTop">15dp</item>
+        <item name = "android:backgroundTint">@color/md_theme_light_onSecondary</item>
+        <item name = "android:textColor">@color/md_theme_dark_inversePrimary</item>
+        <item name = "strokeColor">@color/md_theme_dark_inversePrimary</item>
+        <item name = "strokeWidth">2dp</item>
+        <item name = "android:textSize">30sp</item>
+    </style>
 </resources>
