@@ -14,7 +14,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
     public void numSelected(View v){
-        double numInp = 0.0;
+        int numInp = 0;
+        TextView result = findViewById(R.id.resultText);
+        String currText = result.getText().toString();
         if(v.getId() == R.id.oneButton){
             numInp = 1;
         }else if(v.getId() == R.id.twoButton){
@@ -36,11 +38,13 @@ public class MainActivity extends AppCompatActivity {
         }else if(v.getId() == R.id.zeroButton){
             numInp = 0;
         }else if(v.getId() == R.id.clearButton){
-            numInp = 0;
+            result.setText("");
         }else if(v.getId() == R.id.changeSign){
             numInp *= -1;
         }
-        TextView result = findViewById(R.id.resultText);
-        result.setText(Double.toString(numInp));
+        //multiplication:
+        //set var 1 and var 2
+        //on equals press or different operator press return result
+        result.setText(currText + numInp);
     }
 }
