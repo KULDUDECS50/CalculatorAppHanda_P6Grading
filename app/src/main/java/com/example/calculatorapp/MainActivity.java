@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private String operation = "";
     private Boolean equation = false;
     private String resString = "";
+    private Boolean reset = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,42 +24,44 @@ public class MainActivity extends AppCompatActivity {
 
         TextView resultView = findViewById(R.id.resultText);
         String currText = resultView.getText().toString();
-        if(currText.equals("0")){
+        if(v.getId() != R.id.percentButton && v.getId() != R.id.changeSign &&
+                v.getId() != R.id.multiplyButton && v.getId() != R.id.divideButton &&
+                v.getId() != R.id.plusButton && v.getId() != R.id.minusButton && reset) {
             currText = "";
+            reset = false;
         }
-        //multiplication:
-        if(v.getId() == R.id.oneButton){
+        if (v.getId() == R.id.oneButton) {
             resString = currText + 1;
-        }else if(v.getId() == R.id.twoButton){
+        } else if (v.getId() == R.id.twoButton) {
             resString = currText + 2;
-        }else if(v.getId() == R.id.threeButton){
+        } else if (v.getId() == R.id.threeButton) {
             resString = currText + 3;
-        }else if(v.getId() == R.id.fourButton){
+        } else if (v.getId() == R.id.fourButton) {
             resString = currText + 4;
-        }else if(v.getId() == R.id.fiveButton){
+        } else if (v.getId() == R.id.fiveButton) {
             resString = currText + 5;
-        }else if(v.getId() == R.id.sixButton){
+        } else if (v.getId() == R.id.sixButton) {
             resString = currText + 6;
-        }else if(v.getId() == R.id.sevenButton){
+        } else if (v.getId() == R.id.sevenButton) {
             resString = currText + 7;
-        }else if(v.getId() == R.id.eightButton){
+        } else if (v.getId() == R.id.eightButton) {
             resString = currText + 8;
-        }else if(v.getId() == R.id.nineButton){
+        } else if (v.getId() == R.id.nineButton) {
             resString = currText + 9;
-        }else if(v.getId() == R.id.zeroButton){
+        } else if (v.getId() == R.id.zeroButton) {
             resString = currText + 0;
-        } else if(v.getId() == R.id.piButton){
+        } else if (v.getId() == R.id.piButton) {
             resString = currText + "π";
-        }else if(v.getId() == R.id.clearButton){
+        } else if (v.getId() == R.id.clearButton) {
             resString = "";
             Log.i("msg", "cleared");
-        }else if(v.getId() == R.id.changeSign){
+        } else if (v.getId() == R.id.changeSign) {
             double d = Double.parseDouble(currText) * -1;
-            if(d % 1 == 0) resString = (int)d + "";
+            if (d % 1 == 0) resString = (int) d + "";
             else resString = d + "";
-        }else if(v.getId() == R.id.decimalButton){
-            if(!currText.contains(".")){
-                if(currText.equals("")) resString = currText + "0.";
+        } else if (v.getId() == R.id.decimalButton) {
+            if (!currText.contains(".")) {
+                if (currText.equals("")) resString = currText + "0.";
                 else resString = currText + ".";
             }
         }else{
@@ -130,6 +133,7 @@ public class MainActivity extends AppCompatActivity {
         }else{
             result = numResult + "";
         }
+        reset = true;
         return result;
     }
 }

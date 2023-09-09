@@ -45,7 +45,7 @@
         <item name = "android:layout_marginEnd">@dimen/rightButtonLeft</item>
         <item name = "android:backgroundTint">@color/md_theme_dark_inversePrimary</item>
         <item name = "android:layout_marginStart">@dimen/buttonLeft</item>
-        <item name = "android:textSize">35sp</item>
+        <item name = "android:textSize">30sp</item>
     </style>
     <style name = "NumberButton" parent = "Widget.Material3.Button">
         <item name = "android:layout_width">65dp</item>
