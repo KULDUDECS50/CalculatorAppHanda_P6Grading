@@ -15,7 +15,7 @@
         android:background="#000000"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,20 +23,20 @@
         android:id="@+id/resultText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="176dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="6dp"
         android:text="0"
         android:textAlignment="viewEnd"
         android:textColor="#FFFFFF"
         android:textSize="70sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/resultBackground" />
+        app:layout_constraintBottom_toBottomOf="@+id/resultBackground"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/clearButton"
         style="@style/FunctionButton"
         android:layout_marginStart="20dp"
-        android:text="AC"
+        android:text="@string/clearText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/resultBackground"
         android:onClick="numSelected"/>
@@ -44,7 +44,7 @@
     <Button
         android:id="@+id/changeSign"
         style="@style/FunctionButton"
-        android:text="+/-"
+        android:text="@string/changeSignText"
         app:layout_constraintStart_toEndOf="@+id/clearButton"
         app:layout_constraintTop_toBottomOf="@+id/resultBackground"
         android:onClick="numSelected"/>
@@ -168,11 +168,11 @@
     <Button
         android:id="@+id/eightButton"
         style="@style/NumberButton"
-        android:layout_marginStart="36dp"
+        android:layout_marginStart="30dp"
+        android:onClick="numSelected"
         android:text="8"
         app:layout_constraintStart_toEndOf="@+id/sevenButton"
-        app:layout_constraintTop_toBottomOf="@+id/fiveButton"
-        android:onClick="numSelected"/>
+        app:layout_constraintTop_toBottomOf="@+id/fiveButton" />
 
     <Button
         android:id="@+id/nineButton"

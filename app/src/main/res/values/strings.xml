@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">CalculatorApp</string>
+    <string name="app_name">CalculatorAppHanda</string>
+    <string name="clearText">AC</string>
+    <string name="changeSignText">+/-</string>
 </resources>
